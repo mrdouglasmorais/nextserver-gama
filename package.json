@@ -1,0 +1,31 @@
+{
+  "name": "accenture-next-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js",
+    "clean": "rm -rf dist && mkdir dist",
+    "build-babel": "babel -d ./dist ./src -s",
+    "build": "babel src -d dist",
+    "start": "node dist/server.js",
+    "watch": "babel ./src --out-dir ./dist --watch"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "babel-node": "0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sucrase": "^3.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "babel-cli": "^6.26.0",
+    "nodemon": "^2.0.7"
+  }
+}
